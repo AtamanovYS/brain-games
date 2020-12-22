@@ -1,0 +1,11 @@
+{
+    "name": "hexlet/code",
+    "description": "brain-games",
+    "authors": [
+        {
+            "name": "Юрий Атаманов",
+            "email": "atamanov.ys@gmail.com"
+        }
+    ],
+    "require": {}
+}
