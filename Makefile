@@ -6,3 +6,5 @@ validate:
 	composer validate
 pushAll:
 	git add -A & git commit -m '$(M)' & git push
+lint:
+	composer run-script phpcs -- --standard=PSR12 src bin
