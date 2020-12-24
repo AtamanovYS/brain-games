@@ -3,4 +3,4 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
-Php\Project\Lvl1\Greeting();
+Php\Project\Lvl1\greeting();
