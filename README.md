@@ -2,3 +2,5 @@
 [![Actions Status](https://github.com/AtamanovYS/php-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/AtamanovYS/php-project-lvl1/actions)
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/abe1ecde3f2e62bd841f/maintainability)](https://codeclimate.com/github/AtamanovYS/php-project-lvl1/maintainability)
+
+![Super linter](https://github.com/AtamanovYS/workflows/.github/workflows/superlinter.yml/badge.svg)
