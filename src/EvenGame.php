@@ -14,9 +14,9 @@ function playEvenGame()
         $number = mt_rand();
         $numberIsEven = $number % 2 === 0;
         line("Question: %d", $number);
-        $answer = prompt('Your answer');
-        if (strtolower(trim($answer)) === 'yes' && !$numberIsEven) {
-            line("'yes' is wrong answer ;(. Correct answer was 'no'.");
+        $answer = strtolower(trim(prompt('Your answer')));
+        if ($answer !== 'yes' && $numberIsEven || $answer !== 'no' && !$numberIsEven) {
+            line("'%s' is wrong answer ;(. Correct answer was 'no'.", $answer);
             line("Let's try again, %s!", $name);
             return false;
         } else {
