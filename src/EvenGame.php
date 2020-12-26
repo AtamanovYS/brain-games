@@ -15,10 +15,11 @@ function playEvenGame()
     for ($i = 0; $i < NUMBER_OF_STEPS; ++$i) {
         $number = mt_rand(MIN_NUMBER, MAX_NUMBER);
         $numberIsEven = $number % 2 === 0;
+        $correctAnswer = $numberIsEven ? 'yes' : 'no';
         line("Question: %d", $number);
         $answer = strtolower(trim(prompt('Your answer')));
-        if ($answer !== 'yes' && $numberIsEven || $answer !== 'no' && !$numberIsEven) {
-            line("'%s' is wrong answer ;(. Correct answer was 'no'.", $answer);
+        if ($answer !== $correctAnswer) {
+            line("'%s' is wrong answer ;(. Correct answer was '%s'.", $answer, $correctAnswer);
             line("Let's try again, %s!", $name);
             return false;
         } else {

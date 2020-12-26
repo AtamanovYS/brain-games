@@ -4,4 +4,4 @@
 [![Github Actions Status](https://github.com/AtamanovYS/php-project-lvl1/workflows/PHP_CodeSniffer/badge.svg)](https://github.com/AtamanovYS/php-project-lvl1/actions)
 
 brain-even
-[![asciicast](https://asciinema.org/a/R9kDrpxft0Q4c3NDEaW2FUg1Z.svg)](https://asciinema.org/a/R9kDrpxft0Q4c3NDEaW2FUg1Z)
+[![asciicast](https://asciinema.org/a/Zgd2eVfVkIe5vtTDjRDq8eUOH.svg)](https://asciinema.org/a/Zgd2eVfVkIe5vtTDjRDq8eUOH)
