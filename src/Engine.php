@@ -7,7 +7,7 @@ use function cli\prompt;
 
 const ROUNDS_COUNT = 3;
 
-function playGame($name, $selectedGame) 
+function playGame($name, $selectedGame)
 {
     $gameConfig = getGameConfig($selectedGame);
     line($gameConfig['description']);
