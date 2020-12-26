@@ -4,8 +4,12 @@ brain-games:
 	./bin/brain-games
 brain-even:
 	./bin/brain-even
+brain-calc:
+	./bin/brain-calc
 validate:
 	composer validate
+autoload:
+	composer dump-autoload
 pushAll:
 	git add -A; git commit -m '$(M)'; git push
 lint:
