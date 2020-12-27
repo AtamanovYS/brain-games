@@ -1,6 +1,6 @@
 <?php
 
-namespace Php\Project\Lvl1\Games;
+namespace Php\Project\Lvl1\Games\CalcGame;
 
 function playCalcGame($gameConfig)
 {
@@ -9,10 +9,10 @@ function playCalcGame($gameConfig)
     $operators = ["*", "+", "-"];
     $operatorIndex = mt_rand(0, count($operators) - 1);
     $expression = "{$firstNumber} {$operators[$operatorIndex]} {$secondNumber}";
-    $correctAnswer = (string) eval("return {$expression};");
+    $expressionResult = (string) eval("return {$expression};");
 
     $result = [
     'question'      => $expression,
-    'correctAnswer' => $correctAnswer];
+    'correctAnswer' => $expressionResult];
     return $result;
 }

@@ -1,11 +1,13 @@
 <?php
 
-namespace Php\Project\Lvl1;
+namespace Php\Project\Lvl1\Cli;
 
 use function cli\line;
 use function cli\prompt;
 use function cli\menu;
 use function cli\confirm;
+use function Php\Project\Lvl1\Engine\playGame;
+use function Php\Project\Lvl1\Engine\getGames;
 
 function run()
 {

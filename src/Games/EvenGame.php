@@ -1,6 +1,6 @@
 <?php
 
-namespace Php\Project\Lvl1\Games;
+namespace Php\Project\Lvl1\Games\EvenGame;
 
 function playEvenGame($gameConfig)
 {

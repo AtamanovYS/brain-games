@@ -1,6 +1,6 @@
 <?php
 
-namespace Php\Project\Lvl1;
+namespace Php\Project\Lvl1\Engine;
 
 use function cli\line;
 use function cli\prompt;
@@ -13,11 +13,14 @@ function playGame($name, $selectedGame)
     line($gameConfig['description']);
     for ($i = 0; $i < ROUNDS_COUNT; ++$i) {
         switch ($selectedGame) {
-            case 'EvenGame':
-                $result = Games\playEvenGame($gameConfig);
+            case 'evenGame':
+                $result = \Php\Project\Lvl1\Games\EvenGame\playEvenGame($gameConfig);
                 break;
-            case 'Calculator':
-                $result = Games\playCalcGame($gameConfig);
+            case 'calculator':
+                $result = \Php\Project\Lvl1\Games\CalcGame\playCalcGame($gameConfig);
+                break;
+            case 'gcd':
+                $result = \Php\Project\Lvl1\Games\GcdGame\playGcdGame($gameConfig);
                 break;
         }
         line("Question: %s", $result['question']);
@@ -37,8 +40,9 @@ function playGame($name, $selectedGame)
 function getGames()
 {
     $games = [
-        'EvenGame' => 'Parity check',
-        'Calculator' => 'Calculator'
+        'evenGame' => 'Parity check',
+        'calculator' => 'Calculator',
+        'gcd' => 'Greatest common divisor',
         ];
     return $games;
 }
@@ -47,17 +51,24 @@ function getGameConfig($game)
 {
     $config = [];
     switch ($game) {
-        case 'EvenGame':
+        case 'evenGame':
             $config['minNumber'] = 0;
             $config['maxNumber'] = 100;
             $config['description'] = 'Answer "yes" if the number is even, otherwise answer "no".';
             return $config;
-        case 'Calculator':
+        case 'calculator':
             $config['firstMinNumber'] = 0;
             $config['firstMaxNumber'] = 100;
             $config['secondMinNumber'] = 0;
             $config['secondMaxNumber'] = 100;
             $config['description'] = 'What is the result of the expression?';
+            return $config;
+        case 'gcd':
+            $config['firstMinNumber'] = 1;
+            $config['firstMaxNumber'] = 100;
+            $config['secondMinNumber'] = 1;
+            $config['secondMaxNumber'] = 100;
+            $config['description'] = 'Find the greatest common divisor of given numbers.';
             return $config;
     }
 }
