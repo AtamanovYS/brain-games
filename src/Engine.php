@@ -25,6 +25,9 @@ function playGame($name, $selectedGame)
             case 'progression':
                 $result = \Php\Project\Lvl1\Games\Progression\play($gameConfig);
                 break;
+            case 'prime':
+                $result = \Php\Project\Lvl1\Games\Prime\play($gameConfig);
+                break;
         }
         line("Question: %s", $result['question']);
         $answer = strtolower(trim(prompt('Your answer')));
@@ -46,7 +49,8 @@ function getGames()
         'evenGame' => 'Parity check',
         'calculator' => 'Calculator',
         'gcd' => 'Greatest common divisor',
-        'progression' => 'Arithmetic progression'
+        'progression' => 'Arithmetic progression',
+        'prime' => 'Prime check'
         ];
     return $games;
 }
@@ -82,6 +86,11 @@ function getGameConfig($game)
             $config['minfirstMember'] = 0;
             $config['maxfirstMember'] = 15;
             $config['description'] = 'What number is missing in the progression?';
+            return $config;
+        case 'prime':
+            $config['minNumber'] = 0;
+            $config['maxNumber'] = 100;
+            $config['description'] = 'Answer "yes" if given number is prime. Otherwise answer "no".';
             return $config;
     }
 }
