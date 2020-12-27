@@ -29,6 +29,7 @@ function playGame($name, $selectedGame)
                 $result = \Php\Project\Lvl1\Games\Prime\play($gameConfig);
                 break;
         }
+
         line("Question: %s", $result['question']);
         $answer = strtolower(trim(prompt('Your answer')));
         if ($answer !== $result['correctAnswer']) {
