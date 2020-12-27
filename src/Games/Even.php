@@ -1,8 +1,8 @@
 <?php
 
-namespace Php\Project\Lvl1\Games\EvenGame;
+namespace Php\Project\Lvl1\Games\Even;
 
-function playEvenGame($gameConfig)
+function play($gameConfig)
 {
     $number = mt_rand($gameConfig['minNumber'], $gameConfig['maxNumber']);
     $numberIsEven = $number % 2 === 0;

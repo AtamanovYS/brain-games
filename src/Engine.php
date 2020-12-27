@@ -14,13 +14,16 @@ function playGame($name, $selectedGame)
     for ($i = 0; $i < ROUNDS_COUNT; ++$i) {
         switch ($selectedGame) {
             case 'evenGame':
-                $result = \Php\Project\Lvl1\Games\EvenGame\playEvenGame($gameConfig);
+                $result = \Php\Project\Lvl1\Games\Even\play($gameConfig);
                 break;
             case 'calculator':
-                $result = \Php\Project\Lvl1\Games\CalcGame\playCalcGame($gameConfig);
+                $result = \Php\Project\Lvl1\Games\Calc\play($gameConfig);
                 break;
             case 'gcd':
-                $result = \Php\Project\Lvl1\Games\GcdGame\playGcdGame($gameConfig);
+                $result = \Php\Project\Lvl1\Games\Gcd\play($gameConfig);
+                break;
+            case 'progression':
+                $result = \Php\Project\Lvl1\Games\Progression\play($gameConfig);
                 break;
         }
         line("Question: %s", $result['question']);
@@ -43,6 +46,7 @@ function getGames()
         'evenGame' => 'Parity check',
         'calculator' => 'Calculator',
         'gcd' => 'Greatest common divisor',
+        'progression' => 'Arithmetic progression'
         ];
     return $games;
 }
@@ -69,6 +73,15 @@ function getGameConfig($game)
             $config['secondMinNumber'] = 1;
             $config['secondMaxNumber'] = 100;
             $config['description'] = 'Find the greatest common divisor of given numbers.';
+            return $config;
+        case 'progression':
+            $config['minProgressionLength'] = 5;
+            $config['maxProgressionLength'] = 15;
+            $config['minIncrement'] = 1;
+            $config['maxIncrement'] = 20;
+            $config['minfirstMember'] = 0;
+            $config['maxfirstMember'] = 15;
+            $config['description'] = 'What number is missing in the progression?';
             return $config;
     }
 }
