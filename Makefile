@@ -1,9 +1,9 @@
 install:
 	composer install
-validate:
-	composer validate
 autoload:
 	composer dump-autoload
+validate:
+	composer validate
 lint:
 	composer run-script phpcs -- --standard=PSR12 src bin
 brain-games:
