@@ -6,11 +6,10 @@ use function cli\line;
 use function cli\prompt;
 use function Php\Project\Lvl1\Engine\playGame;
 
-function run(string $game): bool
+function run(string $game): void
 {
     $name = greet();
     playGame($name, $game);
-    return true;
 }
 
 function greet(): string

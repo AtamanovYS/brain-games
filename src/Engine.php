@@ -7,12 +7,12 @@ use function cli\prompt;
 
 const ROUNDS_COUNT = 3;
 
-function playGame($name, $Game)
+function playGame(string $name, string $game): bool
 {
-    $gameConfig = getGameConfig($Game);
+    $gameConfig = getGameConfig($game);
     line($gameConfig['description']);
     for ($i = 0; $i < ROUNDS_COUNT; ++$i) {
-        switch ($Game) {
+        switch ($game) {
             case 'evenGame':
                 $result = \Php\Project\Lvl1\Games\Even\play($gameConfig);
                 break;
@@ -28,6 +28,8 @@ function playGame($name, $Game)
             case 'prime':
                 $result = \Php\Project\Lvl1\Games\Prime\play($gameConfig);
                 break;
+            default:
+                $result = getEmptyResult();
         }
         line("Question: %s", $result['question']);
         $answer = strtolower(trim(prompt('Your answer')));
@@ -43,29 +45,36 @@ function playGame($name, $Game)
     return true;
 }
 
-function getGameConfig($game)
+function getEmptyResult(): array
 {
-    $config = [];
+    $result = [
+    'question'      => '',
+    'correctAnswer' => null];
+    return $result;
+}
+
+function getGameConfig(string $game): array
+{
     switch ($game) {
         case 'evenGame':
             $config['minNumber'] = 0;
             $config['maxNumber'] = 100;
             $config['description'] = 'Answer "yes" if the number is even, otherwise answer "no".';
-            return $config;
+            break;
         case 'calculator':
             $config['firstMinNumber'] = 0;
             $config['firstMaxNumber'] = 100;
             $config['secondMinNumber'] = 0;
             $config['secondMaxNumber'] = 100;
             $config['description'] = 'What is the result of the expression?';
-            return $config;
+            break;
         case 'gcd':
             $config['firstMinNumber'] = 1;
             $config['firstMaxNumber'] = 100;
             $config['secondMinNumber'] = 1;
             $config['secondMaxNumber'] = 100;
             $config['description'] = 'Find the greatest common divisor of given numbers.';
-            return $config;
+            break;
         case 'progression':
             $config['minProgressionLength'] = 5;
             $config['maxProgressionLength'] = 15;
@@ -74,11 +83,14 @@ function getGameConfig($game)
             $config['minfirstMember'] = 0;
             $config['maxfirstMember'] = 15;
             $config['description'] = 'What number is missing in the progression?';
-            return $config;
+            break;
         case 'prime':
             $config['minNumber'] = 0;
             $config['maxNumber'] = 100;
             $config['description'] = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-            return $config;
+            break;
+        default:
+            $config['description'] = '';
     }
+    return $config;
 }
