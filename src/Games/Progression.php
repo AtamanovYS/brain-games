@@ -2,7 +2,7 @@
 
 namespace Php\Project\Lvl1\Games\Progression;
 
-function play($gameConfig)
+function play(array $gameConfig): array
 {
     $length = mt_rand($gameConfig['minProgressionLength'], $gameConfig['maxProgressionLength']);
     $increment = mt_rand($gameConfig['minIncrement'], $gameConfig['maxIncrement']);
@@ -14,7 +14,7 @@ function play($gameConfig)
     $hiddenIndex = mt_rand(0, $length - 1);
     $hiddenElement = $progression[$hiddenIndex];
     $progression[$hiddenIndex] = '..';
-    $progressionStr = implode($progression, ' ');
+    $progressionStr = implode(' ', $progression);
 
     $result = [
     'question'      => $progressionStr,

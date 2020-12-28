@@ -55,6 +55,7 @@ function getEmptyResult(): array
 
 function getGameConfig(string $game): array
 {
+    $config = [];
     switch ($game) {
         case 'evenGame':
             $config['minNumber'] = 0;

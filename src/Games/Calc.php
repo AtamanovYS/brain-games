@@ -2,7 +2,7 @@
 
 namespace Php\Project\Lvl1\Games\Calc;
 
-function play($gameConfig)
+function play(array $gameConfig): array
 {
     $firstNumber = mt_rand($gameConfig['firstMinNumber'], $gameConfig['firstMaxNumber']);
     $secondNumber = mt_rand($gameConfig['secondMinNumber'], $gameConfig['secondMaxNumber']);

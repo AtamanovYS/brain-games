@@ -2,7 +2,7 @@
 
 namespace Php\Project\Lvl1\Games\Prime;
 
-function play($gameConfig)
+function play(array $gameConfig): array
 {
     $number = mt_rand($gameConfig['minNumber'], $gameConfig['maxNumber']);
     $numberIsPrime = isPrime($number);
