@@ -31,7 +31,7 @@ function playGame($name, $selectedGame)
         }
         line("Question: %s", $result['question']);
         $answer = strtolower(trim(prompt('Your answer')));
-        if ($answer != $result['correctAnswer']) {
+        if ($answer !== (string) $result['correctAnswer']) {
             line("'%s' is wrong answer ;(. Correct answer was '%s'.", $answer, $result['correctAnswer']);
             line("Let's try again, %s!", $name);
             return false;
