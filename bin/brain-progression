@@ -5,5 +5,4 @@ namespace Php\Project\Lvl1;
 
 require __DIR__ . '/../vendor/autoload.php';
 
-$name = Cli\greet();
-Engine\playGame($name, 'progression');
+Cli\run('progression');

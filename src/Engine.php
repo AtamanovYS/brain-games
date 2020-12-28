@@ -7,12 +7,12 @@ use function cli\prompt;
 
 const ROUNDS_COUNT = 3;
 
-function playGame($name, $selectedGame)
+function playGame($name, $Game)
 {
-    $gameConfig = getGameConfig($selectedGame);
+    $gameConfig = getGameConfig($Game);
     line($gameConfig['description']);
     for ($i = 0; $i < ROUNDS_COUNT; ++$i) {
-        switch ($selectedGame) {
+        switch ($Game) {
             case 'evenGame':
                 $result = \Php\Project\Lvl1\Games\Even\play($gameConfig);
                 break;
@@ -41,18 +41,6 @@ function playGame($name, $selectedGame)
     }
     line("Congratulations, %s!", $name);
     return true;
-}
-
-function getGames()
-{
-    $games = [
-        'evenGame' => 'Parity check',
-        'calculator' => 'Calculator',
-        'gcd' => 'Greatest common divisor',
-        'progression' => 'Arithmetic progression',
-        'prime' => 'Prime check'
-        ];
-    return $games;
 }
 
 function getGameConfig($game)

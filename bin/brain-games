@@ -5,4 +5,4 @@ namespace Php\Project\Lvl1;
 
 require __DIR__ . '/../vendor/autoload.php';
 
-Cli\run();
+Cli\greet();
