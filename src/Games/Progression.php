@@ -18,6 +18,6 @@ function play($gameConfig)
 
     $result = [
     'question'      => $progressionStr,
-    'correctAnswer' => (string) $hiddenElement];
+    'correctAnswer' => $hiddenElement];
     return $result;
 }

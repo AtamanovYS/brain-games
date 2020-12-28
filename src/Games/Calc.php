@@ -13,6 +13,6 @@ function play($gameConfig)
 
     $result = [
     'question'      => $expression,
-    'correctAnswer' => (string) $expressionResult];
+    'correctAnswer' => $expressionResult];
     return $result;
 }

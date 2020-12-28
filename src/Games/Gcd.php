@@ -10,6 +10,6 @@ function play($gameConfig)
 
     $result = [
     'question'      => "{$firstNumber} {$secondNumber}",
-    'correctAnswer' => (string) $gcd];
+    'correctAnswer' => $gcd];
     return $result;
 }
