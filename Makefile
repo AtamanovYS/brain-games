@@ -1,5 +1,11 @@
 install:
 	composer install
+validate:
+	composer validate
+autoload:
+	composer dump-autoload
+lint:
+	composer run-script phpcs -- --standard=PSR12 src bin
 brain-games:
 	./bin/brain-games
 brain-even:
@@ -12,11 +18,5 @@ brain-progression:
 	./bin/brain-progression
 brain-prime:
 	./bin/brain-prime
-validate:
-	composer validate
-autoload:
-	composer dump-autoload
 pushAll:
 	git add -A; git commit -m '$(m)'; git push
-lint:
-	composer run-script phpcs -- --standard=PSR12 src bin
