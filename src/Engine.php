@@ -32,9 +32,9 @@ function playGame(string $game): void
     congrat($name);
 }
 
-function checkExistance(string $function): void
+function checkExistance(string &$function): void
 {
-    if (!function_exists($function)) {
+    if (!function_exists($function) || !is_callable($function)) {
         throw new \Exception("Unknown function {$function}()");
     }
 }

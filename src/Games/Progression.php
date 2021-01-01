@@ -2,7 +2,7 @@
 
 namespace PhpProjectLvl1\Games\Progression;
 
-function play(array $config): array
+function play(array &$config): array
 {
     $length = mt_rand($config['minProgressionLength'], $config['maxProgressionLength']);
     $increment = mt_rand($config['minIncrement'], $config['maxIncrement']);

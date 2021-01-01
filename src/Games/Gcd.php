@@ -2,7 +2,7 @@
 
 namespace PhpProjectLvl1\Games\Gcd;
 
-function play(array $config): array
+function play(array &$config): array
 {
     $firstNumber = mt_rand($config['firstMinNumber'], $config['firstMaxNumber']);
     $secondNumber = mt_rand($config['secondMinNumber'], $config['secondMaxNumber']);

@@ -2,7 +2,7 @@
 
 namespace PhpProjectLvl1\Games\Even;
 
-function play(array $config): array
+function play(array &$config): array
 {
     $number = mt_rand($config['minNumber'], $config['maxNumber']);
     $numberIsEven = $number % 2 === 0;
