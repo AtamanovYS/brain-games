@@ -25,7 +25,7 @@ function playGame(string $game): void
             throw new \Exception("Unknown function {$play}()");
         }
         $answer = askQuestion($result['question']);
-        $isCorrect = $answer === (string) $result['correctAnswer'] ?: false;
+        $isCorrect = $answer === (string) $result['correctAnswer'];
         showResult($result['correctAnswer'], $answer, $isCorrect, $name);
         if (!$isCorrect) {
             return;
