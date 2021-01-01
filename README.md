@@ -1,10 +1,11 @@
 <h1 align="center">Игры разума</h1>
 
-### Hexlet tests, linter, PHPStan and Code Climate status:
+<p align="center">
 [![Actions Status](https://github.com/AtamanovYS/php-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/AtamanovYS/php-project-lvl1/actions)
 [![Actions Status](https://github.com/AtamanovYS/php-project-lvl1/workflows/PHP_CodeSniffer/badge.svg)](https://github.com/AtamanovYS/php-project-lvl1/actions)
 [![Actions Status](https://github.com/AtamanovYS/php-project-lvl1/workflows/PHPStan/badge.svg)](https://github.com/AtamanovYS/php-project-lvl1/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/abe1ecde3f2e62bd841f/maintainability)](https://codeclimate.com/github/AtamanovYS/php-project-lvl1/maintainability)
+</p>
 ------
 «Игры разума» — набор из пяти консольных игр. Каждая игра задает вопросы, на которые нужно дать правильные ответы. После трех правильных ответов считается, что игра пройдена.
 * Калькулятор. Арифметические выражения, которые необходимо вычислить. Команда для запуска **make brain-calc**
