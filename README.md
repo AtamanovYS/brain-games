@@ -1,4 +1,5 @@
 <h1 align="center">Игры разума</h1>
+
 [![Actions Status](https://github.com/AtamanovYS/php-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/AtamanovYS/php-project-lvl1/actions)
 [![Actions Status](https://github.com/AtamanovYS/php-project-lvl1/workflows/PHP_CodeSniffer/badge.svg)](https://github.com/AtamanovYS/php-project-lvl1/actions)
 [![Actions Status](https://github.com/AtamanovYS/php-project-lvl1/workflows/PHPStan/badge.svg)](https://github.com/AtamanovYS/php-project-lvl1/actions)
