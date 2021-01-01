@@ -1,7 +1,7 @@
 #!/usr/bin/env php
 <?php
 
-namespace Php\Project\Lvl1;
+namespace PhpProjectLvl1;
 
 require __DIR__ . '/../vendor/autoload.php';
 

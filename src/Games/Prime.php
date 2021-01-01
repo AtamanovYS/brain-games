@@ -1,10 +1,10 @@
 <?php
 
-namespace Php\Project\Lvl1\Games\Prime;
+namespace PhpProjectLvl1\Games\Prime;
 
-function play(array $gameConfig): array
+function play(array $config): array
 {
-    $number = mt_rand($gameConfig['minNumber'], $gameConfig['maxNumber']);
+    $number = mt_rand($config['minNumber'], $config['maxNumber']);
     $numberIsPrime = isPrime($number);
     $correctAnswer = $numberIsPrime ? 'yes' : 'no';
 
@@ -22,4 +22,13 @@ function isPrime(int $number): bool
         }
     }
     return true;
+}
+
+function getConfig(): array
+{
+    $config = [];
+    $config['minNumber'] = 0;
+    $config['maxNumber'] = 100;
+    $config['description'] = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+    return $config;
 }
