@@ -10,20 +10,17 @@ function playGame(string $game): void
 {
     $name = greet();
     $prefix = "PhpProjectLvl1\\Games\\{$game}\\";
+
     $getConfig = "{$prefix}getConfig";
-    if (function_exists($getConfig) && is_callable($getConfig)) {
-        $config = $getConfig();
-    } else {
-        throw new \Exception("Unknown function {$getConfig}()");
-    }
+    checkExistance($getConfig);
+    $config = $getConfig();
+
+    $play = "{$prefix}play";
+    checkExistance($play);
+
     outputDescription($config['description']);
     for ($i = 0; $i < ROUNDS_COUNT; ++$i) {
-        $play = "{$prefix}play";
-        if (function_exists($play) && is_callable($play)) {
-            $result = $play($config);
-        } else {
-            throw new \Exception("Unknown function {$play}()");
-        }
+        $result = $play($config);
         $answer = askQuestion($result['question']);
         $isCorrect = $answer === (string) $result['correctAnswer'];
         showResult($result['correctAnswer'], $answer, $isCorrect, $name);
@@ -31,5 +28,13 @@ function playGame(string $game): void
             return;
         }
     }
+
     congrat($name);
+}
+
+function checkExistance(string $function): void
+{
+    if (!function_exists($function)) {
+        throw new \Exception("Unknown function {$function}()");
+    }
 }
