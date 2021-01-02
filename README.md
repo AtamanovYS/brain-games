@@ -5,6 +5,10 @@
 [![Actions Status](https://github.com/AtamanovYS/php-project-lvl1/workflows/PHPStan/badge.svg)](https://github.com/AtamanovYS/php-project-lvl1/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/abe1ecde3f2e62bd841f/maintainability)](https://codeclimate.com/github/AtamanovYS/php-project-lvl1/maintainability)
 ------
+Requirements
+
+ * PHP >= 7.3
+
 «Игры разума» — набор из пяти консольных игр. Каждая игра задает вопросы, на которые нужно дать правильные ответы. После трех правильных ответов считается, что игра пройдена.
 * Калькулятор. Арифметические выражения, которые необходимо вычислить. Команда для запуска **make brain-calc**
 * Прогрессия. Поиск пропущенных чисел в последовательности чисел. Команда для запуска **make brain-progression**
