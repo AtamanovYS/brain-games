@@ -1,4 +1,4 @@
-<h1 align="center">Игры разума</h1>
+<h1 align="center">Brain games</h1>
 
 [![Actions Status](https://github.com/AtamanovYS/php-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/AtamanovYS/php-project-lvl1/actions)
 [![Actions Status](https://github.com/AtamanovYS/php-project-lvl1/workflows/PHP_CodeSniffer/badge.svg)](https://github.com/AtamanovYS/php-project-lvl1/actions)
@@ -16,7 +16,7 @@ Requirements
 * Определение наибольшего общего делителя. Команда для запуска **make brain-gcd**
 * Определение простого числа. Команда для запуска **make brain-prime**
 
-## Примеры работы
+## Examples
 
 brain-calc
 [![asciicast](https://asciinema.org/a/MeHvwelj0kMBRT5KVnTR7Tuky.svg)](https://asciinema.org/a/MeHvwelj0kMBRT5KVnTR7Tuky)
