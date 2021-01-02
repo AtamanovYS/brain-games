@@ -7,7 +7,7 @@ function play(array &$config): array
     $firstNumber = mt_rand($config['firstMinNumber'], $config['firstMaxNumber']);
     $secondNumber = mt_rand($config['secondMinNumber'], $config['secondMaxNumber']);
     $operators = ["*", "+", "-"];
-    $operatorIndex = mt_rand(0, count($operators) - 1);
+    $operatorIndex = mt_rand(0, array_key_last($operators));
     $expression = "{$firstNumber} {$operators[$operatorIndex]} {$secondNumber}";
     $expressionResult = eval("return {$expression};");
 
