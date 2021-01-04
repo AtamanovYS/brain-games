@@ -1,5 +1,10 @@
 {
     "name": "hexlet/code",
+    "config": {
+        "platform": {
+            "php": "7.4"
+        }
+    },
     "description": "brain-games",
     "authors": [
         {
