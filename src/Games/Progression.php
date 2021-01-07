@@ -18,19 +18,21 @@ function play(array &$config): array
 
     $result = [
     'question'      => $progressionStr,
-    'correctAnswer' => $hiddenElement];
+    'correctAnswer' => $hiddenElement,
+    ];
     return $result;
 }
 
 function getConfig(): array
 {
-    $config = [];
-    $config['minProgressionLength'] = 5;
-    $config['maxProgressionLength'] = 15;
-    $config['minIncrement'] = 1;
-    $config['maxIncrement'] = 20;
-    $config['minfirstMember'] = 0;
-    $config['maxfirstMember'] = 15;
-    $config['description'] = 'What number is missing in the progression?';
+    $config = [
+    'minProgressionLength'  => 5,
+    'maxProgressionLength'  => 15,
+    'minIncrement'          => 1,
+    'maxIncrement'          => 20,
+    'minfirstMember'        => 0,
+    'maxfirstMember'        => 15,
+    'description'           => 'What number is missing in the progression?',
+    ];
     return $config;
 }

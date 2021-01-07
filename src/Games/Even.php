@@ -10,15 +10,17 @@ function play(array &$config): array
 
     $result = [
     'question'      => $number,
-    'correctAnswer' => $correctAnswer];
+    'correctAnswer' => $correctAnswer,
+    ];
     return $result;
 }
 
 function getConfig(): array
 {
-    $config = [];
-    $config['minNumber'] = 0;
-    $config['maxNumber'] = 100;
-    $config['description'] = 'Answer "yes" if the number is even, otherwise answer "no".';
+    $config = [
+    'minNumber'     => 0,
+    'maxNumber'     => 100,
+    'description'   => 'Answer "yes" if the number is even, otherwise answer "no".',
+    ];
     return $config;
 }

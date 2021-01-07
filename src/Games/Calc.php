@@ -13,17 +13,19 @@ function play(array &$config): array
 
     $result = [
     'question'      => $expression,
-    'correctAnswer' => $expressionResult];
+    'correctAnswer' => $expressionResult,
+    ];
     return $result;
 }
 
 function getConfig(): array
 {
-    $config = [];
-    $config['firstMinNumber'] = 0;
-    $config['firstMaxNumber'] = 100;
-    $config['secondMinNumber'] = 0;
-    $config['secondMaxNumber'] = 100;
-    $config['description'] = 'What is the result of the expression?';
+    $config = [
+    'firstMinNumber'    => 0,
+    'firstMaxNumber'    => 100,
+    'secondMinNumber'   => 0,
+    'secondMaxNumber'   => 100,
+    'description'       => 'What is the result of the expression?',
+    ];
     return $config;
 }

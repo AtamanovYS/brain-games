@@ -10,7 +10,8 @@ function play(array &$config): array
 
     $result = [
     'question'      => "{$firstNumber} {$secondNumber}",
-    'correctAnswer' => $gcd];
+    'correctAnswer' => $gcd,
+    ];
     return $result;
 }
 
@@ -25,11 +26,12 @@ function gcd(int $number1, int $number2): int
 
 function getConfig(): array
 {
-    $config = [];
-    $config['firstMinNumber'] = 1;
-    $config['firstMaxNumber'] = 100;
-    $config['secondMinNumber'] = 1;
-    $config['secondMaxNumber'] = 100;
-    $config['description'] = 'Find the greatest common divisor of given numbers.';
+    $config = [
+    'firstMinNumber'    => 1,
+    'firstMaxNumber'    => 100,
+    'secondMinNumber'   => 1,
+    'secondMaxNumber'   => 100,
+    'description'       => 'Find the greatest common divisor of given numbers.',
+    ];
     return $config;
 }
