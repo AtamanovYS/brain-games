@@ -11,6 +11,7 @@ use function PhpProjectLvl1\Cli\{greet,
                                 };
 
 const ROUNDS_COUNT = 3;
+const GAMES_FILES_DIRECTORY = __DIR__ . '/Games';
 
 function run(?string $game = null): void
 {
@@ -24,9 +25,14 @@ function run(?string $game = null): void
 
 function getGamesName(): array
 {
-    // preg_grep для исключения скрытых, служебных файлов
-    // array_values для перенумерации массива по порядку
-    $gamesFilesNames = array_values(preg_grep('/^([^.])/', scandir(__DIR__ . '/Games')));
+    $filesInGamesDirectory = scandir(GAMES_FILES_DIRECTORY);
+    if ($filesInGamesDirectory === false) {
+        throw new \Exception('Unknown games files directory ' . GAMES_FILES_DIRECTORY);
+    }
+
+    // (array) preg_grep написал, так как phpstan ругается, что возвращаемый тип preg_grep равен array|false
+    // С приведением не ругается. Но в каких случаях возвращается false не нашёл нигде и сам не смог получить
+    $gamesFilesNames = array_values((array) preg_grep('/^([^.])/', $filesInGamesDirectory));
     return array_map(fn($gameFileName) => str_replace('.php', '', $gameFileName), $gamesFilesNames);
 }
 
@@ -57,7 +63,7 @@ function playGame(string $game, string $name): void
 
 function checkExistance(string &$function): void
 {
-    if (!function_exists($function) || !is_callable($function)) {
-        throw new \Exception("Unknown function {$function}()");
+    if (!function_exists($function)) {
+        //throw new \Exception("Unknown function {$function}()");
     }
 }
