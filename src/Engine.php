@@ -64,6 +64,6 @@ function playGame(string $game, string $name): void
 function checkExistance(string &$function): void
 {
     if (!function_exists($function)) {
-        //throw new \Exception("Unknown function {$function}()");
+        throw new \Exception("Unknown function {$function}()");
     }
 }
