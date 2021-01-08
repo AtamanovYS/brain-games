@@ -2,13 +2,36 @@
 
 namespace PhpProjectLvl1\Engine;
 
-use function PhpProjectLvl1\Cli\{greet, outputDescription, askQuestion, showResult, congrat};
+use function PhpProjectLvl1\Cli\{greet,
+                                 outputDescription,
+                                 askQuestion,
+                                 showResult,
+                                 congrat,
+                                 selectGameInMenu,
+                                };
 
 const ROUNDS_COUNT = 3;
 
-function playGame(string $game): void
+function run(?string $game = null): void
 {
     $name = greet();
+    if ($game === null) {
+        $games = getGamesName();
+        $game = selectGameInMenu($games);
+    }
+    playGame($game, $name);
+}
+
+function getGamesName(): array
+{
+    // preg_grep для исключения скрытых, служебных файлов
+    // array_values для перенумерации массива по порядку
+    $gamesFilesNames = array_values(preg_grep('/^([^.])/', scandir(__DIR__ . '/Games')));
+    return array_map(fn($gameFileName) => str_replace('.php', '', $gameFileName), $gamesFilesNames);
+}
+
+function playGame(string $game, string $name): void
+{
     $prefix = "PhpProjectLvl1\\Games\\{$game}\\";
 
     $getConfig = "{$prefix}getConfig";

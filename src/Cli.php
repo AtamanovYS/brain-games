@@ -2,7 +2,7 @@
 
 namespace PhpProjectLvl1\Cli;
 
-use function cli\{line, prompt};
+use function cli\{line, prompt, menu};
 
 function greet(): string
 {
@@ -10,6 +10,13 @@ function greet(): string
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
     return $name;
+}
+
+function selectGameInMenu(array $games): string
+{
+    line();
+    $selectedIndex = menu($games, null, 'Choose a game (input number)');
+    return $games[$selectedIndex];
 }
 
 function outputDescription(string $description): void
