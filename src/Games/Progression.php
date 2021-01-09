@@ -10,11 +10,10 @@ function play(): array
     $length = mt_rand($config['minProgressionLength'], $config['maxProgressionLength']);
     $increment = mt_rand($config['minIncrement'], $config['maxIncrement']);
     $firstMember = mt_rand($config['minfirstMember'], $config['maxfirstMember']);
-    $progression = [$firstMember];
-    for ($i = 2; $i <= $length; ++$i) {
-        $progression[] = $firstMember + $increment * ($i - 1);
-    }
-    $hiddenIndex = mt_rand(0, $length - 1);
+
+    $progression = evaluateArithmeticProgression($firstMember, $length, $increment);
+
+    $hiddenIndex = array_rand($progression);
     $hiddenElement = $progression[$hiddenIndex];
     $progression[$hiddenIndex] = '..';
     $progressionStr = implode(' ', $progression);
@@ -24,6 +23,16 @@ function play(): array
         'correctAnswer' => $hiddenElement,
     ];
     return $result;
+}
+
+function evaluateArithmeticProgression(int $firstMember, int $length, int $increment): array
+{
+    $progression = [$firstMember];
+    for ($i = 2; $i <= $length; ++$i) {
+        // Формула n-го члена арифметической прогрессии
+        $progression[] = $firstMember + $increment * ($i - 1);
+    }
+    return $progression;
 }
 
 function getConfig(): array

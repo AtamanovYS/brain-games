@@ -38,10 +38,13 @@
         ]
     },
     "require-dev": {
+        "php": ">=7.4.0",
+        "ext-gmp": "*",
         "squizlabs/php_codesniffer": "^3.5",
         "phpstan/phpstan": "^0.12.64",
         "phpstan/extension-installer": "^1.1",
-        "phpstan/phpstan-strict-rules": "^0.12.7"
+        "phpstan/phpstan-strict-rules": "^0.12.7",
+        "phpunit/phpunit": "^9.5"
     },
     "scripts": {
         "phpcs": "phpcs",
