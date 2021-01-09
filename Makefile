@@ -5,9 +5,9 @@ autoload:
 validate:
 	composer validate
 lint:
-	composer run-script phpcs -- --standard=PSR12 src bin tests
+	composer run-script phpcs -- --standard=PSR12 src bin
 stan:
-	composer run-script phpstan -- --level max src bin tests
+	composer run-script phpstan -- --level max src bin
 brain-games:
 	./bin/brain-games
 brain-run:
