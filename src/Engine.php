@@ -43,7 +43,8 @@ function playGame(string $game, string $name): void
     $gameNamespace = "{$prevNameSpace}\\Games\\{$game}\\";
 
     $play = "{$gameNamespace}play";
-    if (!function_exists($play)) {
+    // is_callable, чтобы phpstan не выдавал ошибку
+    if (!function_exists($play) || !is_callable($play)) {
         throw new \Exception("Unknown function {$play}()");
     }
 
