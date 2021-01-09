@@ -36,7 +36,10 @@
             "src/Games/Gcd.php",
             "src/Games/Progression.php",
             "src/Games/Prime.php"
-        ]
+        ],
+        "psr-4": {
+            "PhpProjectLvl1\\Tests\\": "tests"
+        }
     },
     "require-dev": {
         "ext-gmp": "*",
@@ -45,12 +48,7 @@
         "phpstan/extension-installer": "^1.1",
         "phpstan/phpstan-strict-rules": "^0.12.7",
         "phpunit/phpunit": "^9.5"
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "PhpProjectLvl1\\Tests\\": "tests"
-        }
-    },   
+    },  
     "scripts": {
         "phpcs": "phpcs",
         "phpstan": "phpstan analyse",
