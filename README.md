@@ -13,6 +13,7 @@ $ git clone https://github.com/AtamanovYS/php-project-lvl1.git
 
 $ make install
 ```
+
 ## Description
 
 «Brain games» is a set of five console games. Every game ask some questions, you need to give the correct answer. After 3 correct answers the game is finished successfully.  

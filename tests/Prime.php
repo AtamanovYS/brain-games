@@ -9,6 +9,6 @@ class UserTest extends TestCase
 {
     public function testIsPrime(): void
     {
-        $this->assertEquals(1, 1);
+        $this::assertEquals(1, 1);
     }
 }
