@@ -11,11 +11,10 @@ function play(): array
     $numberIsPrime = isPrime($number);
     $correctAnswer = $numberIsPrime ? 'yes' : 'no';
 
-    $result = [
+    return [
         'question'      => $number,
         'correctAnswer' => $correctAnswer,
     ];
-    return $result;
 }
 
 function isPrime(int $number): bool

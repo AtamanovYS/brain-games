@@ -11,11 +11,10 @@ function play(): array
     $secondNumber = mt_rand($config['secondMinNumber'], $config['secondMaxNumber']);
     $gcd = gcd($firstNumber, $secondNumber);
 
-    $result = [
-    'question'      => "{$firstNumber} {$secondNumber}",
-    'correctAnswer' => $gcd,
+    return [
+        'question'      => "{$firstNumber} {$secondNumber}",
+        'correctAnswer' => $gcd,
     ];
-    return $result;
 }
 
 // Алгоритм Евклида для вычисления НОД

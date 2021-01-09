@@ -18,11 +18,10 @@ function play(): array
     $progression[$hiddenIndex] = '..';
     $progressionStr = implode(' ', $progression);
 
-    $result = [
+    return [
         'question'      => $progressionStr,
         'correctAnswer' => $hiddenElement,
     ];
-    return $result;
 }
 
 function evaluateArithmeticProgression(int $firstMember, int $length, int $increment): array

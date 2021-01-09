@@ -11,11 +11,10 @@ function play(): array
     $numberIsEven = $number % 2 === 0;
     $correctAnswer = $numberIsEven ? 'yes' : 'no';
 
-    $result = [
+    return [
         'question'      => $number,
         'correctAnswer' => $correctAnswer,
     ];
-    return $result;
 }
 
 function getConfig(): array

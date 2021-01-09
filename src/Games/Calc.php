@@ -17,11 +17,10 @@ function play(): array
     $executor = new MathExecutor();
     $expressionResult = $executor->execute($expression);
 
-    $result = [
+    return [
         'question'      => $expression,
         'correctAnswer' => $expressionResult,
     ];
-    return $result;
 }
 
 function getConfig(): array
