@@ -33,6 +33,7 @@ function getGamesName(): array
 
     // (array) preg_grep написал, так как phpstan ругается, что возвращаемый тип preg_grep равен array|false
     // Поэтому привожу, чтобы предупреждения не было. Но в каких случаях возвращается false, не нашёл
+    // array_values для того, чтобы ключи по порядку
     $gamesFilesNames = array_values((array) preg_grep('/^([^.])/', $filesInGamesDirectory));
     return array_map(fn($gameFileName) => str_replace('.php', '', $gameFileName), $gamesFilesNames);
 }
