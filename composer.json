@@ -37,10 +37,7 @@
             "src/Games/Gcd.php",
             "src/Games/Progression.php",
             "src/Games/Prime.php"
-        ],
-        "psr-4": {
-            "PhpProjectLvl1\\Tests\\": "tests"
-        }
+        ]
     },
     "require-dev": {
         "ext-gmp": "*",

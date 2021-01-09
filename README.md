@@ -5,18 +5,23 @@
 [![Actions Status](https://github.com/AtamanovYS/php-project-lvl1/workflows/PHPStan/badge.svg)](https://github.com/AtamanovYS/php-project-lvl1/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/abe1ecde3f2e62bd841f/maintainability)](https://codeclimate.com/github/AtamanovYS/php-project-lvl1/maintainability)
 ------
+
 ## Setup
+
 ```sh
 $ git clone https://github.com/AtamanovYS/php-project-lvl1.git
+
 $ make install
 ```
-«Игры разума» — набор из пяти консольных игр. Каждая игра задает вопросы, на которые нужно дать правильные ответы. После трех правильных ответов считается, что игра пройдена.  
-Команда для запуска `make brain-run`
-* Калькулятор. Арифметические выражения, которые необходимо вычислить. `make brain-calc`
-* Прогрессия. Поиск пропущенных чисел в последовательности чисел. `make brain-progression`
-* Определение четного числа. `make brain-even`
-* Определение наибольшего общего делителя. `make brain-gcd`
-* Определение простого числа. `make brain-prime`
+## Description
+
+«Brain games» is a set of five console games. Every game ask some questions, you need to give the correct answer. After 3 correct answers the game is finished successfully.  
+To run use `make brain-run`
+* Calculator. Evaluate arithmetic expressions. `make brain-calc`
+* Progression. Find a missing number in a sequence of numbers. `make brain-progression`
+* Determining of an even number. `make brain-even`
+* Determining the greatest common divisor. `make brain-gcd`
+* Determining of a prime number. `make brain-prime`
 
 ## Examples
 
