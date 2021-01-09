@@ -20,7 +20,10 @@ function play(): array
 
 function isPrime(int $number): bool
 {
-    for ($i = 2, $halfNumber = intdiv($number, 2); $i < $halfNumber; ++$i) {
+    if ($number <= 1) {
+        return false;
+    }
+    for ($i = 2, $halfNumber = intdiv($number, 2); $i <= $halfNumber; ++$i) {
         if ($number % $i === 0) {
             return false;
         }

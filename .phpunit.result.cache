@@ -1,1 +1,1 @@
-C:37:"PHPUnit\Runner\DefaultTestResultCache":102:{a:2:{s:7:"defects";a:0:{}s:5:"times";a:1:{s:42:"PhpProjectLvl1\Tests\UserTest::testIsPrime";d:0.012;}}}
+C:37:"PHPUnit\Runner\DefaultTestResultCache":269:{a:2:{s:7:"defects";a:1:{s:43:"PhpProjectLvl1\Tests\PrimeTest::testIsPrime";i:5;}s:5:"times";a:3:{s:42:"PhpProjectLvl1\Tests\UserTest::testIsPrime";d:0.012;s:37:"PhpProjectLvl1\Tests\GcdTest::testGcd";d:0.013;s:43:"PhpProjectLvl1\Tests\PrimeTest::testIsPrime";d:2.377;}}}
