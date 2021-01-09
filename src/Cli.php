@@ -15,7 +15,7 @@ function greet(): string
 function selectGame(array $games): string
 {
     line();
-    $selectedIndex = menu($games, null, 'Choose a game (input number)');
+    $selectedIndex = menu($games, null, 'Choose a game (input a number)');
     return $games[$selectedIndex];
 }
 
