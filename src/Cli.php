@@ -12,7 +12,7 @@ function greet(): string
     return $name;
 }
 
-function selectGameInMenu(array $games): string
+function selectGame(array $games): string
 {
     line();
     $selectedIndex = menu($games, null, 'Choose a game (input number)');
@@ -30,17 +30,22 @@ function askQuestion(string $question): string
     return strtolower(trim(prompt('Your answer')));
 }
 
-function congrat(string $name): void
+function congratulate(string $name): void
 {
     line("Congratulations, %s!", $name);
 }
 
-function showResult(string $correctAnswer, string $answer, bool $isCorrect, string $name): void
+function outputCorrectResult(string $correctAnswer, string $answer): void
 {
-    if (!$isCorrect) {
-        line("'%s' is wrong answer ;(. Correct answer was '%s'.", $answer, $correctAnswer);
-        line("Let's try again, %s!", $name);
-    } else {
-        line('Correct!');
-    }
+    line("'%s' is wrong answer ;(. Correct answer was '%s'.", $answer, $correctAnswer);
+}
+
+function outputFailureMessage(string $name): void
+{
+    line("Let's try again, %s!", $name);
+}
+
+function outputSuccessMessage(): void
+{
+    line('Correct!');
 }

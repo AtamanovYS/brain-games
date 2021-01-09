@@ -2,8 +2,11 @@
 
 namespace PhpProjectLvl1\Games\Gcd;
 
-function play(array &$config): array
+const DESCRIPTION = 'Find the greatest common divisor of given numbers.';
+
+function play(): array
 {
+    $config = getConfig();
     $firstNumber = mt_rand($config['firstMinNumber'], $config['firstMaxNumber']);
     $secondNumber = mt_rand($config['secondMinNumber'], $config['secondMaxNumber']);
     $gcd = gcd($firstNumber, $secondNumber);
@@ -26,12 +29,10 @@ function gcd(int $number1, int $number2): int
 
 function getConfig(): array
 {
-    $config = [
-    'firstMinNumber'    => 1,
-    'firstMaxNumber'    => 100,
-    'secondMinNumber'   => 1,
-    'secondMaxNumber'   => 100,
-    'description'       => 'Find the greatest common divisor of given numbers.',
+    return [
+        'firstMinNumber'    => 1,
+        'firstMaxNumber'    => 100,
+        'secondMinNumber'   => 1,
+        'secondMaxNumber'   => 100,
     ];
-    return $config;
 }

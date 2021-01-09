@@ -2,8 +2,11 @@
 
 namespace PhpProjectLvl1\Games\Progression;
 
-function play(array &$config): array
+const DESCRIPTION = 'What number is missing in the progression?';
+
+function play(): array
 {
+    $config = getConfig();
     $length = mt_rand($config['minProgressionLength'], $config['maxProgressionLength']);
     $increment = mt_rand($config['minIncrement'], $config['maxIncrement']);
     $firstMember = mt_rand($config['minfirstMember'], $config['maxfirstMember']);
@@ -17,22 +20,20 @@ function play(array &$config): array
     $progressionStr = implode(' ', $progression);
 
     $result = [
-    'question'      => $progressionStr,
-    'correctAnswer' => $hiddenElement,
+        'question'      => $progressionStr,
+        'correctAnswer' => $hiddenElement,
     ];
     return $result;
 }
 
 function getConfig(): array
 {
-    $config = [
-    'minProgressionLength'  => 5,
-    'maxProgressionLength'  => 15,
-    'minIncrement'          => 1,
-    'maxIncrement'          => 20,
-    'minfirstMember'        => 0,
-    'maxfirstMember'        => 15,
-    'description'           => 'What number is missing in the progression?',
+    return [
+        'minProgressionLength'  => 5,
+        'maxProgressionLength'  => 15,
+        'minIncrement'          => 1,
+        'maxIncrement'          => 20,
+        'minfirstMember'        => 0,
+        'maxfirstMember'        => 15,
     ];
-    return $config;
 }

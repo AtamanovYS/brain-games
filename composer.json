@@ -19,10 +19,12 @@
         "bin/brain-calc",
         "bin/brain-gcd",
         "bin/brain-progression",
-        "bin/brain-prime"
+        "bin/brain-prime",
+        "bin/brain-run"
       ],
     "require": {
-        "wp-cli/php-cli-tools": "^0.11.11"
+        "wp-cli/php-cli-tools": "^0.11.11",
+        "nxp/math-executor": "^2.1"
     },
     "autoload": {
         "files": [

@@ -5,9 +5,10 @@ namespace PhpProjectLvl1\Engine;
 use function PhpProjectLvl1\Cli\{greet,
                                  outputDescription,
                                  askQuestion,
-                                 showResult,
-                                 congrat,
-                                 selectGameInMenu,
+                                 outputCorrectResult,
+                                 outputSuccessMessage, outputFailureMessage,
+                                 congratulate,
+                                 selectGame,
                                 };
 
 const ROUNDS_COUNT = 3;
@@ -18,7 +19,7 @@ function run(?string $game = null): void
     $name = greet();
     if ($game === null) {
         $games = getGamesName();
-        $game = selectGameInMenu($games);
+        $game = selectGame($games);
     }
     playGame($game, $name);
 }
@@ -31,39 +32,40 @@ function getGamesName(): array
     }
 
     // (array) preg_grep написал, так как phpstan ругается, что возвращаемый тип preg_grep равен array|false
-    // С приведением не ругается. Но в каких случаях возвращается false не нашёл нигде и сам не смог получить
+    // Поэтому привожу, чтобы предупреждения не было. Но в каких случаях возвращается false, не нашёл
     $gamesFilesNames = array_values((array) preg_grep('/^([^.])/', $filesInGamesDirectory));
     return array_map(fn($gameFileName) => str_replace('.php', '', $gameFileName), $gamesFilesNames);
 }
 
 function playGame(string $game, string $name): void
 {
-    $prefix = "PhpProjectLvl1\\Games\\{$game}\\";
+    $prevNameSpace = getPrevNamespace();
+    $gameNamespace = "{$prevNameSpace}\\Games\\{$game}\\";
 
-    $getConfig = "{$prefix}getConfig";
-    checkExistance($getConfig);
-    $config = $getConfig();
+    $play = "{$gameNamespace}play";
+    if (!function_exists($play)) {
+        throw new \Exception("Unknown function {$play}()");
+    }
 
-    $play = "{$prefix}play";
-    checkExistance($play);
-
-    outputDescription($config['description']);
+    outputDescription(constant("{$gameNamespace}DESCRIPTION"));
     for ($i = 0; $i < ROUNDS_COUNT; ++$i) {
-        $result = $play($config);
+        $result = $play();
         $answer = askQuestion($result['question']);
         $isCorrect = $answer === (string) $result['correctAnswer'];
-        showResult($result['correctAnswer'], $answer, $isCorrect, $name);
         if (!$isCorrect) {
+            outputCorrectResult($result['correctAnswer'], $answer);
+            outputFailureMessage($name);
             return;
         }
+        outputSuccessMessage();
     }
 
-    congrat($name);
+    congratulate($name);
 }
 
-function checkExistance(string &$function): void
+function getPrevNamespace(): string
 {
-    if (!function_exists($function)) {
-        throw new \Exception("Unknown function {$function}()");
-    }
+    $partsNamespace = explode("\\", __NAMESPACE__);
+    array_pop($partsNamespace);
+    return implode("\\", $partsNamespace);
 }
