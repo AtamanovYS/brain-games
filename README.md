@@ -5,7 +5,11 @@
 [![Actions Status](https://github.com/AtamanovYS/php-project-lvl1/workflows/PHPStan/badge.svg)](https://github.com/AtamanovYS/php-project-lvl1/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/abe1ecde3f2e62bd841f/maintainability)](https://codeclimate.com/github/AtamanovYS/php-project-lvl1/maintainability)
 ------
-
+## Setup
+```sh
+$ git clone https://github.com/AtamanovYS/php-project-lvl1.git
+$ make install
+```
 «Игры разума» — набор из пяти консольных игр. Каждая игра задает вопросы, на которые нужно дать правильные ответы. После трех правильных ответов считается, что игра пройдена.  
 Команда для запуска `make brain-run`
 * Калькулятор. Арифметические выражения, которые необходимо вычислить. `make brain-calc`
