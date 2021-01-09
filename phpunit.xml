@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit bootstrap="vendor/autoload.php">
-    <testsuite name="gcd and isPrime functions">
+    <testsuite name="test gcd and isPrime functions">
         <directory suffix=".php">tests</directory>
     </testsuite>
 </phpunit>
