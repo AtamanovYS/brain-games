@@ -26,17 +26,19 @@ To run use `make brain-run`
 
 ## Examples
 
-brain-calc
+[![asciicast](https://asciinema.org/a/1chPZvszGBoiPkeXE5WumBTeM.svg)](https://asciinema.org/a/1chPZvszGBoiPkeXE5WumBTeM)
+
+Calculator
 [![asciicast](https://asciinema.org/a/MeHvwelj0kMBRT5KVnTR7Tuky.svg)](https://asciinema.org/a/MeHvwelj0kMBRT5KVnTR7Tuky)
 
-brain-progression
+Progression
 [![asciicast](https://asciinema.org/a/DxZFTeHgTSvm6vjJUFrgfKfsm.svg)](https://asciinema.org/a/DxZFTeHgTSvm6vjJUFrgfKfsm)
 
-brain-even
+Determining of an even number
 [![asciicast](https://asciinema.org/a/Zgd2eVfVkIe5vtTDjRDq8eUOH.svg)](https://asciinema.org/a/Zgd2eVfVkIe5vtTDjRDq8eUOH)
 
-brain-gcd
+Determining the greatest common divisor
 [![asciicast](https://asciinema.org/a/GzO3PS3ImJJn3FIOEpyJ8gpC2.svg)](https://asciinema.org/a/GzO3PS3ImJJn3FIOEpyJ8gpC2)
 
-brain-prime
+Determining of a prime number
 [![asciicast](https://asciinema.org/a/86XXErPrhyKtQ6Hlok4WA4N3H.svg)](https://asciinema.org/a/86XXErPrhyKtQ6Hlok4WA4N3H)
