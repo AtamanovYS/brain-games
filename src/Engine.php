@@ -5,23 +5,27 @@ namespace PhpProjectLvl1\Engine;
 use function PhpProjectLvl1\Cli\{greet,
                                  outputDescription,
                                  askQuestion,
-                                 outputCorrectResult,
-                                 outputSuccessMessage, outputFailureMessage,
-                                 congratulate,
+                                 outputSuccessMessage,
+                                 outputResultMessage,
                                  selectGame,
                                 };
 
 const ROUNDS_COUNT = 3;
 const GAMES_FILES_DIRECTORY = __DIR__ . '/Games';
 
-function run(?string $game = null): void
+function run(): void
 {
-    $name = greet();
-    if ($game === null) {
-        $games = getGamesName();
-        $game = selectGame($games);
+    $games = getGamesName();
+    $game = selectGame($games);
+    $gameNamespace = getPrevNamespace() . "\\Games\\{$game}";
+    $play = "{$gameNamespace}\\play";
+
+    // is_callable, чтобы phpstan не выдавал ошибку
+    if (!function_exists($play) || !is_callable($play)) {
+        throw new \Exception("Unknown function {$play}()");
     }
-    playGame($game, $name);
+
+    $play();
 }
 
 function getGamesName(): array
@@ -38,31 +42,37 @@ function getGamesName(): array
     return array_map(fn($gameFileName) => str_replace('.php', '', $gameFileName), $gamesFilesNames);
 }
 
-function playGame(string $game, string $name): void
+function play(string $gameNamespace): void
 {
-    $prevNameSpace = getPrevNamespace();
-    $gameNamespace = "{$prevNameSpace}\\Games\\{$game}\\";
+    $name = greet();
+    outputDescription(constant("{$gameNamespace}\\DESCRIPTION"));
 
-    $play = "{$gameNamespace}play";
+    $getData = "{$gameNamespace}\\getData";
+
     // is_callable, чтобы phpstan не выдавал ошибку
-    if (!function_exists($play) || !is_callable($play)) {
-        throw new \Exception("Unknown function {$play}()");
+    if (!function_exists($getData) || !is_callable($getData)) {
+        throw new \Exception("Unknown function {$getData}()");
     }
 
-    outputDescription(constant("{$gameNamespace}DESCRIPTION"));
+    // Пришлось инициализировать, чтобы phpstan пропускал тесты,
+    // не ругался при вызове outputResultMessage, что переменная может быть не определена
+    // Хотя такой ситуации быть не может никогда
+    $answer = '';
+    $result = [];
+
+    $success = true;
     for ($i = 0; $i < ROUNDS_COUNT; ++$i) {
-        $result = $play();
+        $result = $getData();
         $answer = askQuestion($result['question']);
         $isCorrect = $answer === (string) $result['correctAnswer'];
         if (!$isCorrect) {
-            outputCorrectResult($result['correctAnswer'], $answer);
-            outputFailureMessage($name);
-            return;
+            $success = false;
+            break;
         }
         outputSuccessMessage();
     }
 
-    congratulate($name);
+    outputResultMessage($success, $result['correctAnswer'], $answer, $name);
 }
 
 function getPrevNamespace(): string

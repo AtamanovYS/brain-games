@@ -26,7 +26,7 @@ To run use `make brain-run`
 
 ## Examples
 
-[![asciicast](https://asciinema.org/a/1chPZvszGBoiPkeXE5WumBTeM.svg)](https://asciinema.org/a/1chPZvszGBoiPkeXE5WumBTeM)
+[![asciicast](https://asciinema.org/a/ddVsvUeP39SPWEUqWe9eMb28L.svg)](https://asciinema.org/a/ddVsvUeP39SPWEUqWe9eMb28L)
 
 Calculator
 [![asciicast](https://asciinema.org/a/MeHvwelj0kMBRT5KVnTR7Tuky.svg)](https://asciinema.org/a/MeHvwelj0kMBRT5KVnTR7Tuky)

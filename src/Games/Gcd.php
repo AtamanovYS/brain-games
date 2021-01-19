@@ -4,7 +4,12 @@ namespace PhpProjectLvl1\Games\Gcd;
 
 const DESCRIPTION = 'Find the greatest common divisor of given numbers.';
 
-function play(): array
+function play(): void
+{
+    \PhpProjectLvl1\Engine\play(__NAMESPACE__);
+}
+
+function getData(): array
 {
     $config = getConfig();
     $firstNumber = mt_rand($config['firstMinNumber'], $config['firstMaxNumber']);

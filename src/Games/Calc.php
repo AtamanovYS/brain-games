@@ -2,11 +2,14 @@
 
 namespace PhpProjectLvl1\Games\Calc;
 
-use NXP\MathExecutor;
-
 const DESCRIPTION = 'What is the result of the expression?';
 
-function play(): array
+function play(): void
+{
+    \PhpProjectLvl1\Engine\play(__NAMESPACE__);
+}
+
+function getData(): array
 {
     $config = getConfig();
     $firstNumber = mt_rand($config['firstMinNumber'], $config['firstMaxNumber']);
@@ -14,13 +17,25 @@ function play(): array
     $operators = ["*", "+", "-"];
     $operator = $operators[array_rand($operators)];
     $expression = "{$firstNumber} {$operator} {$secondNumber}";
-    $executor = new MathExecutor();
-    $expressionResult = $executor->execute($expression);
-
+    $expressionResult = evaluateExpression($firstNumber, $secondNumber, $operator);
     return [
         'question'      => $expression,
         'correctAnswer' => $expressionResult,
     ];
+}
+
+function evaluateExpression(int $firstNumber, int $secondNumber, string $operator): int
+{
+    switch ($operator) {
+        case '+':
+            return $firstNumber + $secondNumber;
+        case '-':
+            return $firstNumber - $secondNumber;
+        case '*':
+            return $firstNumber * $secondNumber;
+        default:
+            throw new \Exception("Unknown operator: '{$operator}");
+    }
 }
 
 function getConfig(): array

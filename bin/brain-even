@@ -5,4 +5,4 @@ namespace PhpProjectLvl1;
 
 require __DIR__ . '/../vendor/autoload.php';
 
-Engine\run('Even');
+Games\Even\play();

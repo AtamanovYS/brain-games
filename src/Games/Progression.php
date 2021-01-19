@@ -4,7 +4,12 @@ namespace PhpProjectLvl1\Games\Progression;
 
 const DESCRIPTION = 'What number is missing in the progression?';
 
-function play(): array
+function play(): void
+{
+    \PhpProjectLvl1\Engine\play(__NAMESPACE__);
+}
+
+function getData(): array
 {
     $config = getConfig();
     $length = mt_rand($config['minProgressionLength'], $config['maxProgressionLength']);
@@ -26,8 +31,8 @@ function play(): array
 
 function evaluateArithmeticProgression(int $firstMember, int $length, int $increment): array
 {
-    $progression = [$firstMember];
-    for ($i = 2; $i <= $length; ++$i) {
+    $progression = [];
+    for ($i = 0; $i < $length; ++$i) {
         // Формула n-го члена арифметической прогрессии
         $progression[] = $firstMember + $increment * ($i - 1);
     }

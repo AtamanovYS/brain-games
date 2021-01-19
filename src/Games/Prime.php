@@ -4,12 +4,16 @@ namespace PhpProjectLvl1\Games\Prime;
 
 const DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-function play(): array
+function play(): void
+{
+    \PhpProjectLvl1\Engine\play(__NAMESPACE__);
+}
+
+function getData(): array
 {
     $config = getConfig();
     $number = mt_rand($config['minNumber'], $config['maxNumber']);
-    $numberIsPrime = isPrime($number);
-    $correctAnswer = $numberIsPrime ? 'yes' : 'no';
+    $correctAnswer = isPrime($number) ? 'yes' : 'no';
 
     return [
         'question'      => $number,

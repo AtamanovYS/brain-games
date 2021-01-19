@@ -24,25 +24,20 @@ function outputDescription(string $description): void
     line("%s", $description);
 }
 
+function outputResultMessage(bool $success, string $correctAnswer, string $answer, string $name): void
+{
+    if ($success) {
+        line("Congratulations, %s!", $name);
+    } else {
+        line("'%s' is wrong answer ;(. Correct answer was '%s'.", $answer, $correctAnswer);
+        line("Let's try again, %s!", $name);
+    }
+}
+
 function askQuestion(string $question): string
 {
     line("Question: %s", $question);
     return strtolower(trim(prompt('Your answer')));
-}
-
-function congratulate(string $name): void
-{
-    line("Congratulations, %s!", $name);
-}
-
-function outputCorrectResult(string $correctAnswer, string $answer): void
-{
-    line("'%s' is wrong answer ;(. Correct answer was '%s'.", $answer, $correctAnswer);
-}
-
-function outputFailureMessage(string $name): void
-{
-    line("Let's try again, %s!", $name);
 }
 
 function outputSuccessMessage(): void

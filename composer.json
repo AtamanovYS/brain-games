@@ -24,8 +24,7 @@
       ],
     "require": {
         "php": ">=7.4.0",
-        "wp-cli/php-cli-tools": "^0.11.11",
-        "nxp/math-executor": "^2.1"
+        "wp-cli/php-cli-tools": "^0.11.11"
     },
     "autoload": {
         "files": [
