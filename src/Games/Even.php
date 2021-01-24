@@ -17,7 +17,7 @@ function getData(): array
 
     return [
         'question'      => $number,
-        'correctAnswer' => (string) $correctAnswer,
+        'correctAnswer' => $correctAnswer,
     ];
 }
 

@@ -45,6 +45,6 @@
     },
     "scripts": {
         "phpcs": "phpcs",
-        "phpstan": "phpstan analyse"
+        "phpstan": "phpstan analyse -c ./phpstan.neon"
     }
 }
