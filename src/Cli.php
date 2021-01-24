@@ -10,7 +10,7 @@ use function cli\{line,
 function greet(): string
 {
     line('Welcome to the Brain Game!');
-    $name = trim(prompt('May I have your name?'));
+    $name = ucfirst(trim(prompt('May I have your name?')));
     line("Hello, %s!", $name);
     return $name;
 }
