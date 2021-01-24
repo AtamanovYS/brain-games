@@ -6,7 +6,7 @@ const DESCRIPTION = 'What number is missing in the progression?';
 
 function play(): void
 {
-    \PhpProjectLvl1\Engine\play(__NAMESPACE__);
+    \PhpProjectLvl1\Engine\play(DESCRIPTION, __NAMESPACE__ . '\\getData');
 }
 
 function getData(): array
@@ -25,7 +25,7 @@ function getData(): array
 
     return [
         'question'      => $progressionStr,
-        'correctAnswer' => $hiddenElement,
+        'correctAnswer' => (string) $hiddenElement,
     ];
 }
 

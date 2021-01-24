@@ -6,7 +6,7 @@ const DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no
 
 function play(): void
 {
-    \PhpProjectLvl1\Engine\play(__NAMESPACE__);
+    \PhpProjectLvl1\Engine\play(DESCRIPTION, __NAMESPACE__ . '\\getData');
 }
 
 function getData(): array
@@ -17,7 +17,7 @@ function getData(): array
 
     return [
         'question'      => $number,
-        'correctAnswer' => $correctAnswer,
+        'correctAnswer' => (string) $correctAnswer,
     ];
 }
 

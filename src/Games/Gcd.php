@@ -6,7 +6,7 @@ const DESCRIPTION = 'Find the greatest common divisor of given numbers.';
 
 function play(): void
 {
-    \PhpProjectLvl1\Engine\play(__NAMESPACE__);
+    \PhpProjectLvl1\Engine\play(DESCRIPTION, __NAMESPACE__ . '\\getData');
 }
 
 function getData(): array
@@ -18,7 +18,7 @@ function getData(): array
 
     return [
         'question'      => "{$firstNumber} {$secondNumber}",
-        'correctAnswer' => $gcd,
+        'correctAnswer' => (string) $gcd,
     ];
 }
 

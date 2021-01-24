@@ -6,7 +6,7 @@ const DESCRIPTION = 'What is the result of the expression?';
 
 function play(): void
 {
-    \PhpProjectLvl1\Engine\play(__NAMESPACE__);
+    \PhpProjectLvl1\Engine\play(DESCRIPTION, __NAMESPACE__ . '\\getData');
 }
 
 function getData(): array
@@ -20,7 +20,7 @@ function getData(): array
     $expressionResult = evaluateExpression($firstNumber, $secondNumber, $operator);
     return [
         'question'      => $expression,
-        'correctAnswer' => $expressionResult,
+        'correctAnswer' => (string) $expressionResult,
     ];
 }
 
