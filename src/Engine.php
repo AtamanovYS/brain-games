@@ -2,11 +2,7 @@
 
 namespace PhpProjectLvl1\Engine;
 
-use function PhpProjectLvl1\Cli\{greet,
-                                 selectGame,
-                                 ask,
-                                };
-use function cli\{line as show};
+use function cli\{line, prompt, menu};
 
 const ROUNDS_COUNT = 3;
 const GAMES_FILES_DIRECTORY = __DIR__ . '/Games';
@@ -25,6 +21,13 @@ function run(): void
     $play();
 }
 
+function selectGame(array $games): string
+{
+    line();
+    $selectedIndex = menu($games, null, 'Choose a game (input a number)');
+    return $games[$selectedIndex];
+}
+
 function getGamesName(): array
 {
     $filesInGamesDirectory = scandir(GAMES_FILES_DIRECTORY);
@@ -39,7 +42,7 @@ function getGamesName(): array
 function play(string $description, string $getData): void
 {
     $name = greet();
-    show($description);
+    line($description);
 
     if (!function_exists($getData) || !is_callable($getData)) {
         throw new \Exception("Unknown function {$getData}()");
@@ -51,22 +54,35 @@ function play(string $description, string $getData): void
 
     for ($i = 0; $i < ROUNDS_COUNT; ++$i) {
         $result = $getData();
-        show("Question: %s", $result['question']);
+        line("Question: %s", $result['question']);
         $answer = ask('Your answer');
         $isCorrect = $answer === $result['correctAnswer'];
         if (!$isCorrect) {
             $success = false;
             break;
         }
-        show('Correct!');
+        line('Correct!');
     }
 
     if ($success) {
-        show("Congratulations, %s!", $name);
+        line("Congratulations, %s!", $name);
     } else {
-        show("'%s' is wrong answer ;(. Correct answer was '%s'.", $answer, $result['correctAnswer']);
-        show("Let's try again, %s!", $name);
+        line("'%s' is wrong answer ;(. Correct answer was '%s'.", $answer, $result['correctAnswer']);
+        line("Let's try again, %s!", $name);
     }
+}
+
+function greet(): string
+{
+    line('Welcome to the Brain Game!');
+    $name = ucfirst(trim(prompt('May I have your name?')));
+    line("Hello, %s!", $name);
+    return $name;
+}
+
+function ask(string $question): string
+{
+    return strtolower(trim(prompt($question)));
 }
 
 function getPrevNamespace(): string

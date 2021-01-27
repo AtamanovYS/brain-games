@@ -1,8 +1,8 @@
 #!/usr/bin/env php
 <?php
-// Этот файл нужен для работы автотестов Хекслета, которые его запускают
+
 namespace PhpProjectLvl1;
 
 require __DIR__ . '/../vendor/autoload.php';
 
-Cli\greet();
+Engine\greet();
