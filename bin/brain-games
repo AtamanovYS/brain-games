@@ -1,5 +1,6 @@
 #!/usr/bin/env php
 <?php
+// Этот файл оставлен, чтобы проходили автотексты Хекслета
 
 namespace PhpProjectLvl1;
 
