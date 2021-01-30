@@ -19,8 +19,7 @@
         "bin/brain-calc",
         "bin/brain-gcd",
         "bin/brain-progression",
-        "bin/brain-prime",
-        "bin/brain-run"
+        "bin/brain-prime"
       ],
     "require": {
         "php": ">=7.4.0",

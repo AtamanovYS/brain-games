@@ -1,9 +1,8 @@
 #!/usr/bin/env php
 <?php
-// Этот файл оставлен, чтобы проходили автотексты Хекслета
 
-namespace PhpProjectLvl1;
+namespace BrainGames;
 
 require __DIR__ . '/../vendor/autoload.php';
 
-Engine\greet();
+Engine\run();

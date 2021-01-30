@@ -1,12 +1,12 @@
 <?php
 
-namespace PhpProjectLvl1\Games\Prime;
+namespace BrainGames\Games\Prime;
 
 const DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 function play(): void
 {
-    \PhpProjectLvl1\Engine\play(DESCRIPTION, __NAMESPACE__ . '\\getData');
+    \BrainGames\Engine\play(DESCRIPTION, __NAMESPACE__ . '\\getData');
 }
 
 function getData(): array

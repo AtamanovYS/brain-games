@@ -1,12 +1,12 @@
 <?php
 
-namespace PhpProjectLvl1\Games\Calc;
+namespace BrainGames\Games\Calc;
 
 const DESCRIPTION = 'What is the result of the expression?';
 
 function play(): void
 {
-    \PhpProjectLvl1\Engine\play(DESCRIPTION, __NAMESPACE__ . '\\getData');
+    \BrainGames\Engine\play(DESCRIPTION, __NAMESPACE__ . '\\getData');
 }
 
 function getData(): array

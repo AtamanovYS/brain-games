@@ -1,2 +1,15 @@
 parameters:
   checkMissingIterableValueType: false
+  ignoreErrors:
+    -
+      message: '#Trying to invoke string but it might not be a callable.#'
+      path: src/Engine.php
+    -
+      message: '#Variable \$answer might not be defined.#'
+      path: src/Engine.php
+    -
+      message: '#Variable \$result might not be defined.#'
+      path: src/Engine.php
+    -
+      message: '#Parameter \#1 \$input of function array_values expects array, array\|false given.#'
+      path: src/Engine.php

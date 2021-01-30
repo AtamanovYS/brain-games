@@ -1,12 +1,12 @@
 <?php
 
-namespace PhpProjectLvl1\Games\Progression;
+namespace BrainGames\Games\Progression;
 
 const DESCRIPTION = 'What number is missing in the progression?';
 
 function play(): void
 {
-    \PhpProjectLvl1\Engine\play(DESCRIPTION, __NAMESPACE__ . '\\getData');
+    \BrainGames\Engine\play(DESCRIPTION, __NAMESPACE__ . '\\getData');
 }
 
 function getData(): array

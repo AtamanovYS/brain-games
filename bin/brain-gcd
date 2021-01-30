@@ -1,7 +1,7 @@
 #!/usr/bin/env php
 <?php
 
-namespace PhpProjectLvl1;
+namespace BrainGames;
 
 require __DIR__ . '/../vendor/autoload.php';
 

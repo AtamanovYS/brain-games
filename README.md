@@ -1,15 +1,14 @@
 <h1 align="center">Brain games</h1>
 
-[![Actions Status](https://github.com/AtamanovYS/php-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/AtamanovYS/php-project-lvl1/actions)
-[![Actions Status](https://github.com/AtamanovYS/php-project-lvl1/workflows/PHP_CodeSniffer/badge.svg)](https://github.com/AtamanovYS/php-project-lvl1/actions)
-[![Actions Status](https://github.com/AtamanovYS/php-project-lvl1/workflows/PHPStan/badge.svg)](https://github.com/AtamanovYS/php-project-lvl1/actions)
-[![Maintainability](https://api.codeclimate.com/v1/badges/abe1ecde3f2e62bd841f/maintainability)](https://codeclimate.com/github/AtamanovYS/php-project-lvl1/maintainability)
+[![Actions Status](https://github.com/AtamanovYS/brain-games/workflows/PHP_CodeSniffer/badge.svg)](https://github.com/AtamanovYS/brain-games/actions)
+[![Actions Status](https://github.com/AtamanovYS/brain-games/workflows/PHPStan/badge.svg)](https://github.com/AtamanovYS/brain-games/actions)
+[![Maintainability](https://api.codeclimate.com/v1/badges/abe1ecde3f2e62bd841f/maintainability)](https://codeclimate.com/github/AtamanovYS/brain-games/maintainability)
 ------
 
 ## Setup
 
 ```sh
-$ git clone https://github.com/AtamanovYS/php-project-lvl1.git
+$ git clone https://github.com/AtamanovYS/brain-games.git
 
 $ make install
 ```
@@ -17,7 +16,7 @@ $ make install
 ## Description
 
 «Brain games» is a set of five console games. Every game ask some questions, you need to give the correct answer. After 3 correct answers the game is finished successfully.  
-To run use `make brain-run`
+To run use `make brain-games`
 * Calculator. Evaluate arithmetic expressions. `make brain-calc`
 * Progression. Find a missing number in a sequence of numbers. `make brain-progression`
 * Determining of an even number. `make brain-even`
@@ -26,19 +25,19 @@ To run use `make brain-run`
 
 ## Examples
 
-[![asciicast](https://asciinema.org/a/ddVsvUeP39SPWEUqWe9eMb28L.svg)](https://asciinema.org/a/ddVsvUeP39SPWEUqWe9eMb28L)
+[![asciicast](https://asciinema.org/a/9Itn7fIBpZLXqVw7bkXI7IEim.svg)](https://asciinema.org/a/9Itn7fIBpZLXqVw7bkXI7IEim)
 
 Calculator
-[![asciicast](https://asciinema.org/a/MeHvwelj0kMBRT5KVnTR7Tuky.svg)](https://asciinema.org/a/MeHvwelj0kMBRT5KVnTR7Tuky)
+[![asciicast](https://asciinema.org/a/8HkLXK5OLJA7G4jowBIpT5T4w.svg)](https://asciinema.org/a/8HkLXK5OLJA7G4jowBIpT5T4w)
 
 Progression
-[![asciicast](https://asciinema.org/a/DxZFTeHgTSvm6vjJUFrgfKfsm.svg)](https://asciinema.org/a/DxZFTeHgTSvm6vjJUFrgfKfsm)
+[![asciicast](https://asciinema.org/a/UuOkEy3GtpCiMnkRich1fXbGk.svg)](https://asciinema.org/a/UuOkEy3GtpCiMnkRich1fXbGk)
 
 Determining of an even number
-[![asciicast](https://asciinema.org/a/Zgd2eVfVkIe5vtTDjRDq8eUOH.svg)](https://asciinema.org/a/Zgd2eVfVkIe5vtTDjRDq8eUOH)
+[![asciicast](https://asciinema.org/a/t3zI9RVx3UJNgBNplPxROST9N.svg)](https://asciinema.org/a/t3zI9RVx3UJNgBNplPxROST9N)
 
 Determining the greatest common divisor
-[![asciicast](https://asciinema.org/a/GzO3PS3ImJJn3FIOEpyJ8gpC2.svg)](https://asciinema.org/a/GzO3PS3ImJJn3FIOEpyJ8gpC2)
+[![asciicast](https://asciinema.org/a/mZLMpYoTbmNqcLY2uYeUpPVaI.svg)](https://asciinema.org/a/mZLMpYoTbmNqcLY2uYeUpPVaI)
 
 Determining of a prime number
-[![asciicast](https://asciinema.org/a/86XXErPrhyKtQ6Hlok4WA4N3H.svg)](https://asciinema.org/a/86XXErPrhyKtQ6Hlok4WA4N3H)
+[![asciicast](https://asciinema.org/a/gey5rL5CNKRtMCHc9eNRSbYcO.svg)](https://asciinema.org/a/gey5rL5CNKRtMCHc9eNRSbYcO)

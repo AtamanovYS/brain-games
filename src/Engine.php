@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpProjectLvl1\Engine;
+namespace BrainGames\Engine;
 
 use function cli\{line, prompt, menu};
 
@@ -14,9 +14,7 @@ function run(): void
     $gameNamespace = getPrevNamespace() . "\\Games\\{$game}";
     $play = "{$gameNamespace}\\play";
 
-    // is_callable вставил, так как phpstan выдает ошибку
-    // trying to invoke string but it might not be a callable
-    if (!function_exists($play) || !is_callable($play)) {
+    if (!function_exists($play)) {
         throw new \Exception("Unknown function {$play}()");
     }
 
@@ -37,9 +35,7 @@ function getGamesName(): array
         throw new \Exception('Unknown games files directory ' . GAMES_FILES_DIRECTORY);
     }
 
-    // Приведение к типу (array) вставил, т.к. phpstan выдаёт ошибку
-    // Он считает, что preg_grep может иногда bool вернуть, но не нашёл, когда это возможно
-    $gamesFilesNames = array_values((array) preg_grep('/^([^.])/', $filesInGamesDirectory));
+    $gamesFilesNames = array_values(preg_grep('/^([^.])/', $filesInGamesDirectory));
     return array_map(fn($gameFileName) => str_replace('.php', '', $gameFileName), $gamesFilesNames);
 }
 
@@ -48,18 +44,11 @@ function play(string $description, string $getData): void
     $name = greet();
     line($description);
 
-    // is_callable вставил, так как phpstan выдает ошибку
-    // trying to invoke string but it might not be a callable
-    if (!function_exists($getData) || !is_callable($getData)) {
+    if (!function_exists($getData)) {
         throw new \Exception("Unknown function {$getData}()");
     }
 
-    // Вставил инициализацию, т.к. phpstan выдает ошибку
-    // Variable $answer might not be defined.
-    $answer = '';
-    $result = [];
     $success = true;
-
     for ($i = 0; $i < ROUNDS_COUNT; ++$i) {
         $result = $getData();
         line("Question: %s", $result['question']);

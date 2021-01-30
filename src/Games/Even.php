@@ -1,12 +1,12 @@
 <?php
 
-namespace PhpProjectLvl1\Games\Even;
+namespace BrainGames\Games\Even;
 
 const DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 function play(): void
 {
-    \PhpProjectLvl1\Engine\play(DESCRIPTION, __NAMESPACE__ . '\\getData');
+    \BrainGames\Engine\play(DESCRIPTION, __NAMESPACE__ . '\\getData');
 }
 
 function getData(): array
