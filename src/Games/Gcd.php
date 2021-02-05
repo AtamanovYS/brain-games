@@ -7,6 +7,7 @@ const DESCRIPTION = 'Find the greatest common divisor of given numbers.';
 function play(): void
 {
     \BrainGames\Engine\play(DESCRIPTION, __NAMESPACE__ . '\\getData');
+    
 }
 
 function getData(): array
