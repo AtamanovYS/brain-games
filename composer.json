@@ -1,14 +1,14 @@
 {
-    "name": "hexlet/code",
+    "name": "atamanovys/brain-games",
     "config": {
         "platform": {
             "php": "7.4"
         }
     },
-    "description": "brain-games",
+    "description": "some simple interactive console games",
     "authors": [
         {
-            "name": "Юрий Атаманов",
+            "name": "AtamanovYS",
             "email": "atamanov.ys@gmail.com"
         }
     ],
