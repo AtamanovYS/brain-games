@@ -22,7 +22,7 @@ function getData(): array
     ];
 }
 
-// Алгоритм Евклида для вычисления НОД
+// Euclidean algorithm for finding GCD
 function gcd(int $number1, int $number2): int
 {
     $a = max($number1, $number2);

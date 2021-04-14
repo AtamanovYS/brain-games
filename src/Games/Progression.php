@@ -33,7 +33,7 @@ function evaluateArithmeticProgression(int $firstMember, int $length, int $incre
 {
     $progression = [];
     for ($i = 0; $i < $length; ++$i) {
-        // Формула n-го члена арифметической прогрессии
+        // The formula for the nth term of an arithmetic progression
         $progression[] = $firstMember + $increment * ($i - 1);
     }
     return $progression;
