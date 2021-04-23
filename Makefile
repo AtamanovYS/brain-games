@@ -9,7 +9,7 @@ update:
 lint:
 	composer run-script phpcs -- --standard=PSR12 src bin
 stan:
-	composer run-script phpstan -- --level max src bin
+	composer run-script phpstan
 brain-games:
 	./bin/brain-games
 brain-even:
