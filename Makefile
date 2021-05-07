@@ -22,5 +22,5 @@ brain-progression:
 	./bin/brain-progression
 brain-prime:
 	./bin/brain-prime
-pushAll:
+push-all:
 	git add -A; git commit -m '$(m)'; git push
