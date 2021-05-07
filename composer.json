@@ -1,10 +1,5 @@
 {
     "name": "atamanovys/brain-games",
-    "config": {
-        "platform": {
-            "php": "7.4"
-        }
-    },
     "description": "some simple interactive console games",
     "authors": [
         {
@@ -20,7 +15,7 @@
         "bin/brain-gcd",
         "bin/brain-progression",
         "bin/brain-prime"
-      ],
+    ],
     "require": {
         "php": ">=7.4.0",
         "wp-cli/php-cli-tools": "^0.11.11"
