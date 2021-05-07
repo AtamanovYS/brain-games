@@ -5,17 +5,9 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/abe1ecde3f2e62bd841f/maintainability)](https://codeclimate.com/github/AtamanovYS/brain-games/maintainability)
 ------
 
-## Setup
-
-```sh
-$ git clone https://github.com/AtamanovYS/brain-games.git
-
-$ make install
-```
-
 ## Description
 
-«Brain games» is a set of five console games. Every game ask some questions, you need to give the correct answer. After 3 correct answers the game is finished successfully.  
+«Brain games» is a set of five console games. Every game ask some questions, you need to give the correct answer. After 3 correct answers the game is finished successfully.
 To run use `make brain-games`
 * Calculator. Evaluate arithmetic expressions. `make brain-calc`
 * Progression. Find a missing number in a sequence of numbers. `make brain-progression`
