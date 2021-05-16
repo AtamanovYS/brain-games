@@ -1,6 +1,7 @@
 <h1 align="center">Brain games</h1>
 
 <p align="center">
+
 [![Actions Status](https://github.com/AtamanovYS/brain-games/workflows/PHP_CodeSniffer/badge.svg)](https://github.com/AtamanovYS/brain-games/actions)
 
 [![Actions Status](https://github.com/AtamanovYS/brain-games/workflows/PHPStan/badge.svg)](https://github.com/AtamanovYS/brain-games/actions)
