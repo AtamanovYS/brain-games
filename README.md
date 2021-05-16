@@ -23,17 +23,17 @@
 
 [![asciicast](https://asciinema.org/a/9Itn7fIBpZLXqVw7bkXI7IEim.svg)](https://asciinema.org/a/9Itn7fIBpZLXqVw7bkXI7IEim)
 
-Calculator
+Калькулятор
 [![asciicast](https://asciinema.org/a/8HkLXK5OLJA7G4jowBIpT5T4w.svg)](https://asciinema.org/a/8HkLXK5OLJA7G4jowBIpT5T4w)
 
-Progression
+Прогрессия
 [![asciicast](https://asciinema.org/a/UuOkEy3GtpCiMnkRich1fXbGk.svg)](https://asciinema.org/a/UuOkEy3GtpCiMnkRich1fXbGk)
 
-Determining of an even number
+Определение четного числа
 [![asciicast](https://asciinema.org/a/t3zI9RVx3UJNgBNplPxROST9N.svg)](https://asciinema.org/a/t3zI9RVx3UJNgBNplPxROST9N)
 
-Determining the greatest common divisor
+Определение наибольшего общего делителя
 [![asciicast](https://asciinema.org/a/mZLMpYoTbmNqcLY2uYeUpPVaI.svg)](https://asciinema.org/a/mZLMpYoTbmNqcLY2uYeUpPVaI)
 
-Determining of a prime number
+Определение простого числа
 [![asciicast](https://asciinema.org/a/gey5rL5CNKRtMCHc9eNRSbYcO.svg)](https://asciinema.org/a/gey5rL5CNKRtMCHc9eNRSbYcO)
