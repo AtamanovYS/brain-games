@@ -4,7 +4,6 @@
 [![Actions Status](https://github.com/AtamanovYS/brain-games/workflows/PHPStan/badge.svg)](https://github.com/AtamanovYS/brain-games/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/abe1ecde3f2e62bd841f/maintainability)](https://codeclimate.com/github/AtamanovYS/brain-games/maintainability)
 </h1>
-------
 
 ## Description
 
