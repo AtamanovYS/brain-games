@@ -17,7 +17,7 @@
 ## Технологии
 * PHP (7.4), Composer
 * PHP_CodeSniffer (PSR-12), PHPStan
-* Github Actions, Code Climate
+* GitHub Actions, Code Climate
 
 ## Примеры
 
