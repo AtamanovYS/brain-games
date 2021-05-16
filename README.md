@@ -1,26 +1,25 @@
 <h1 align="center">Brain games</h1>
 
-<p align="center">
-
 [![Actions Status](https://github.com/AtamanovYS/brain-games/workflows/PHP_CodeSniffer/badge.svg)](https://github.com/AtamanovYS/brain-games/actions)
-
 [![Actions Status](https://github.com/AtamanovYS/brain-games/workflows/PHPStan/badge.svg)](https://github.com/AtamanovYS/brain-games/actions)
-
 [![Maintainability](https://api.codeclimate.com/v1/badges/abe1ecde3f2e62bd841f/maintainability)](https://codeclimate.com/github/AtamanovYS/brain-games/maintainability)
 
-</p>
+## Описание
 
-## Description
+«Brain games (Игры разума)» – набор из пяты консольных игр. Каждая игра задает вопросы, на которые нужно дать правильные ответы.  После трех правильных ответов считается, что игра пройдена. Неправильные ответы завершают игру и предлагают пройти ее заново.
+Команда для запуска `make brain-games`
+* Калькулятор. Арифметические выражения, которые необходимо вычислить. `make brain-calc`
+* Прогрессия. Поиск пропущенных чисел в последовательности чисел. `make brain-progression`
+* Определение четного числа. `make brain-even`
+* Определение наибольшего общего делителя. `make brain-gcd`
+* Определение простого числа. `make brain-prime`
 
-«Brain games» is a set of five console games. Every game ask some questions, you need to give the correct answer. After 3 correct answers the game is finished successfully.
-To run use `make brain-games`
-* Calculator. Evaluate arithmetic expressions. `make brain-calc`
-* Progression. Find a missing number in a sequence of numbers. `make brain-progression`
-* Determining of an even number. `make brain-even`
-* Determining the greatest common divisor. `make brain-gcd`
-* Determining of a prime number. `make brain-prime`
+## Технологии
+* PHP (7.4), Composer
+* PHP_CodeSniffer (PSR-12), PHPStan
+* Github Actions, Code Climate
 
-## Examples
+## Примеры
 
 [![asciicast](https://asciinema.org/a/9Itn7fIBpZLXqVw7bkXI7IEim.svg)](https://asciinema.org/a/9Itn7fIBpZLXqVw7bkXI7IEim)
 
