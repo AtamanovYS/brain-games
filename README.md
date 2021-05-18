@@ -15,8 +15,9 @@
 * Определение простого числа. `make brain-prime`
 
 ## Технологии
+
 * PHP (7.4), Composer
-* PHP_CodeSniffer (PSR-12), PHPStan
+* Линтер PHP_CodeSniffer (PSR-12), статический анализатор PHPStan
 * GitHub Actions, Code Climate
 
 ## Примеры
